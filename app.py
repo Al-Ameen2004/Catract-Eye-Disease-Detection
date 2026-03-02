@@ -1,3 +1,4 @@
+from model import HybridModel
 import torch
 import requests
 import os
@@ -5,8 +6,8 @@ import os
 MODEL_URL = "https://huggingface.co/Ameen2004/Catract-Eye-Disease-Detection/resolve/main/hybrid_model.pth"
 MODEL_PATH = "hybrid_model.pth"
 
-# Create model architecture
-model = HybridModel()   # <-- use your real class name
+# Create model architecture EXACTLY like training
+model = HybridModel(num_classes=3)
 
 # Download model if not present
 if not os.path.exists(MODEL_PATH):
