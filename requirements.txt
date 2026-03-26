@@ -1,7 +1,6 @@
 streamlit
 torch
 torchvision
-pillow
-requests
 timm
-openai
+Pillow
+google-genai
