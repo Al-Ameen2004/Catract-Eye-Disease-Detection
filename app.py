@@ -10,7 +10,7 @@ from google import genai
 # -------------------------
 # Configure Gemini API (New SDK)
 # -------------------------
-api_key = ("AIzaSyBDTR0Qk9hV7ZiuN7eyWc62rnsu8noi3eI")  # safer way
+api_key = ("API KEY")  # safer way
 
 if api_key:
     client = genai.Client(api_key=api_key)
@@ -68,7 +68,7 @@ model = load_model()
 # -------------------------
 # UI
 # -------------------------
-st.title("Hybrid ResNet18 + ViT Cataract Detection")
+st.title("CataractAi")
 
 if model is None:
     st.error("⚠️ Model file 'hybrid_model.pth' not found.")
@@ -105,7 +105,7 @@ if uploaded_file:
     class_names = [
         "Cataract",
         "Normal",
-        "Other Disease"
+        "Normal(Exceptional_Case)"
     ]
 
     prediction = class_names[predicted.item()]
